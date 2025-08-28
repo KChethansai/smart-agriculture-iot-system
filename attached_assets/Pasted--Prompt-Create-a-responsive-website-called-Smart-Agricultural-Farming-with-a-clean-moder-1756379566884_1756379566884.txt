@@ -1,0 +1,110 @@
+**Prompt:**
+
+Create a responsive website called **Smart Agricultural Farming** with a clean, modern design using green and eco-friendly themes. Add smooth animations and make it mobile-friendly.
+
+### Authentication
+
+* Add a login/sign-up system with sessions or Google login (no local database).
+* Restrict advanced features until the user logs in.
+
+### Homepage
+
+* Hero section with the text: *“Transforming Farming with AI & Smart Technology.”*
+* Add a call-to-action button: **Get Started → Login/Sign Up**.
+* Display major farming problems (rainfall dependency, pests, soil issues, market struggles) as interactive cards.
+* Each card opens a popup with solutions.
+
+### Features (Interactive)
+
+Create a Features page where each feature is clickable and fully interactive:
+
+1. **AI Crop Health Checker**
+
+   * Upload a crop photo.
+   * Send image to AI vision API.
+   * Return health status and treatment advice.
+
+2. **Smart Irrigation Tool**
+
+   * User inputs soil type, crop type, and moisture %.
+   * AI/web data recommends how much water to use.
+
+3. **AI Chatbot**
+
+   * Farmers type questions.
+   * Chatbot uses an AI API to fetch answers in simple language.
+
+4. **Drone Farming Simulation**
+
+   * Animated demo of drones spraying and monitoring fields.
+   * Clicking a drone shows how spraying works.
+
+5. **AI Crop Recommendation Tool**
+
+   * User enters soil type and season.
+   * AI suggests the best crops to grow.
+
+6. **Blockchain Direct Selling Simulation**
+
+   * Show crop price data fetched from the web.
+   * Demonstrate how farmers connect directly with buyers.
+
+7. **Plant Scanner (Main Feature)**
+
+   * Users upload a plant photo.
+   * AI identifies the plant and fetches details:
+
+     * Plant name and health
+     * Suitable soil type
+     * Water requirements
+     * Fertilizers/pesticides needed
+     * Best growing season
+     * Market demand/prices
+   * Display results in a card format.
+   * Allow the user to **download results as PDF**.
+
+8. **3D Field Layout Generator (New Feature)**
+
+   * User enters land details:
+
+     * Field dimensions (length, width)
+     * Soil type
+     * Crop type(s)
+     * Water availability
+     * Farming goal (maximize yield, save water, or mixed farming)
+   * AI generates a **3D interactive layout** of the field.
+   * Layout includes crop rows, irrigation lines, spacing, and drone paths.
+   * Allow zoom, rotate, and view of the 3D model.
+   * Provide a summary explaining why the layout is efficient.
+   * Option to export the layout as image or PDF.
+
+### Solutions Page
+
+* Add an infographic showing: *Sensors → AI → Web Knowledge → 3D Layout → Farmer Actions → Higher Yield.*
+* Make each part clickable to show real-world examples.
+
+### About Us Page
+
+* Add a mission and vision section about future farms with AI and 3D modeling.
+* Add interactive team cards with hover effects.
+
+### Contact Page
+
+* Functional contact form (Name, Email, Message).
+* Newsletter signup integrated with a free email tool like Mailchimp.
+* Add a map with placeholder location.
+
+### User Dashboard
+
+* Show saved plant scans.
+* Display irrigation recommendations.
+* Store saved 3D field layouts (cached in browser storage).
+* Option to re-run analysis with new inputs.
+
+### Extra Enhancements
+
+* Add testimonials slider with positive farmer feedback.
+* Create a Blog/News section that fetches latest agriculture technology updates via RSS/API feeds.
+* Add smooth page transitions and AI-powered search bar.
+
+---
