@@ -63,3 +63,30 @@ If soil moisture is sufficient → irrigation stops.
 ---
 
 ## Project Structure
+│
+├── code
+│ ├── irrigation_controller.ino
+│
+├── hardware
+│ ├── circuit_diagram
+│ └── sensor_connections
+│
+└── README.md
+
+
+---
+
+## Future Improvements
+
+- Mobile app monitoring
+- Cloud-based sensor dashboard
+- AI-based irrigation prediction
+- Weather data integration
+- Large-scale farm deployment
+
+---
+
+## Author
+
+Kakunuri Chethan Sai  
+BTech CSE (Data Science)
