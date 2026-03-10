@@ -119,7 +119,7 @@ export default function FieldLayout3D({ onClose }: FieldLayout3DProps) {
   };
 
   const downloadLayout = () => {
-    if (!layout) return;
+    if (!layout || !layout.layoutData) return;
     
     const layoutReport = `
 3D Field Layout Report
@@ -128,7 +128,7 @@ Generated: ${new Date().toLocaleDateString()}
 Field Information:
 - Name: ${layout.name || 'Unnamed Field'}
 - Dimensions: ${layout.length}m x ${layout.width}m
-- Total Area: ${layout.layoutData.area.toFixed(2)} m²
+- Total Area: ${(layout.layoutData.area || 0).toFixed(2)} m²
 - Soil Type: ${layout.soilType}
 - Crop Type: ${layout.cropType}
 - Farming Goal: ${layout.farmingGoal}
@@ -360,30 +360,34 @@ Benefits:
                 <CardContent className="p-4">
                   <h4 className="font-semibold text-foreground mb-3">Layout Statistics</h4>
                   <div className="grid grid-cols-2 gap-3 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Total Area:</span>
-                      <span className="text-foreground font-medium">
-                        {layout.layoutData.area.toFixed(0)} m²
-                      </span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Plants:</span>
-                      <span className="text-foreground font-medium">
-                        {layout.layoutData.estimatedPlants.toLocaleString()}
-                      </span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Irrigation Lines:</span>
-                      <span className="text-foreground font-medium">
-                        {layout.layoutData.irrigationLines}
-                      </span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Drone Paths:</span>
-                      <span className="text-foreground font-medium">
-                        {layout.layoutData.dronePathways}
-                      </span>
-                    </div>
+                    {layout?.layoutData && (
+                      <>
+                        <div className="flex justify-between">
+                          <span className="text-muted-foreground">Total Area:</span>
+                          <span className="text-foreground font-medium">
+                            {layout.layoutData.area?.toFixed(0) || '0'} m²
+                          </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-muted-foreground">Plants:</span>
+                          <span className="text-foreground font-medium">
+                            {layout.layoutData.estimatedPlants?.toLocaleString() || '0'}
+                          </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-muted-foreground">Irrigation Lines:</span>
+                          <span className="text-foreground font-medium">
+                            {layout.layoutData.irrigationLines || '0'}
+                          </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-muted-foreground">Drone Paths:</span>
+                          <span className="text-foreground font-medium">
+                            {layout.layoutData.dronePathways || '0'}
+                          </span>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </CardContent>
               </Card>
